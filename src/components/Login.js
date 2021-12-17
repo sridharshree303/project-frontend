@@ -25,6 +25,7 @@ const Login = () => {
         axios.post(`http://localhost:8082/loginuser`, userLogin)
             .then((response) => {
                 console.log(response.data);
+                sessionStorage.setItem('user',response.data.userType);
                 sessionStorage.setItem('isUserLoggedIn', true);
                 alert('Success');
                 window.location.assign('/home');

@@ -1,5 +1,5 @@
 
-import React,{useEffect,useState} from "react";
+import React, { useEffect, useState } from "react";
 import Header from "./components/Header";
 import Home from "./components/Home";
 import Login from "./components/Login";
@@ -10,32 +10,54 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 const Routes = () => {
 
-    <p> THis is routers page </p>
+
     let [loginStatus, setLoginStatus] = useState(false);
+    let [user, setUser] = useState('ADMIN');
 
     useEffect(() => {
         setLoginStatus(sessionStorage.getItem('isUserLoggedIn'));
+        setUser(sessionStorage.getItem('user'))
     }, []);
 
-    if (loginStatus ) {    // login statu && id -1
-        return (
-            <div>
-                <Router>
-                    <div>
-                        <Header />
-                        <div className="container">
-                            <Switch>
-                                <Route exact path="/" loginStatus > <Home /> </Route>
-                                <Route path="/home" loginStatus> <Home /> </Route>
-                                <Route path="/logout"> <Logout /> </Route>
-                                <Route path="/*"> <Page404 /> </Route>
-                            </Switch>
+    if (loginStatus) {
+        if (user === 'ADMIN') {
+            return (
+                <div>
+                    <Router>
+                        <div>
+                            <Header />
+                            <div className="container">
+                                <Switch>
+                                    <Route exact path="/" loginStatus > <Home /> </Route>
+                                    <Route path="/home" loginStatus> <Home /> </Route>
+                                    <Route path="/logout"> <Logout /> </Route>
+                                    <Route path="/*"> <Page404 /> </Route>
+                                </Switch>
+                            </div>
+                            {/* <Footer /> */}
                         </div>
-                        {/* <Footer /> */}
-                    </div>
-                </Router>
-            </div>
-        )
+                    </Router>
+                </div>
+            )
+        } else if (user === 'FARMER') {
+            return (
+                <div>
+                    <Router>
+                        <Header />
+                    </Router>
+                </div>
+            );
+        } else if (user === 'DEALER') {
+            return (
+                <div>
+                    <Router>
+                        <Header />
+                    </Router>
+                </div>
+            );
+        }else {
+            return null;
+        }
     }
     else {
         return (
