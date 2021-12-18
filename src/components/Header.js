@@ -38,10 +38,23 @@ const Header = () => {
                                     </li>
 
                                     <div class="dropdown">
-                                        <button class="dropbtn">Milk</button>
+                                        <button class="dropbtn">Company</button>
                                         <div class="dropdown-content">
-                                            {/* <li className="nav-item"> */}
-                                            <Link className="nav-link" to="/getallcompanybuyorders">AllCompanyBuys</Link> 
+
+                                            <Link className="nav-link" to="/addcompany">AddCompany</Link>
+                                            <Link className="nav-link" to="/deletecompany">Delete Company</Link>
+                                            <Link className="nav-link" to="/getallcompany">List Of Companys</Link>
+                                            <Link className="nav-link" to="/getcompanybyid">Search CompanyId</Link>
+                                            <Link className="nav-link" to="/updatecompany">Update Company </Link>
+                                            <Link className="nav-link" to="/companydata">Others</Link>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="dropdown">
+                                        <button class="dropbtn">Sales</button>
+                                        <div class="dropdown-content">
+                                            <Link className="nav-link" to="/getallcompanybuyorders">AllCompanyBuys</Link>
                                             <Link className="nav-link" to="/getallcompanysellorders">AllCompanySells</Link>
                                             <Link className="nav-link" to="/companypaybilltofarmer">PayFarmerBill</Link>
                                         </div>
@@ -76,6 +89,17 @@ const Header = () => {
                             </button>
                             <div class="collapse navbar-collapse" id="navbarResponsive">
                                 <ul class="navbar-nav ml-auto">
+                                    <div class="dropdown">
+                                        <button class="dropbtn">Farmer</button>
+                                        <div class="dropdown-content">
+                                            <Link className="nav-link" to="/addfarmer">AddFarmer</Link>
+                                            <Link className="nav-link" to="/deletefarmer">DeleteFarmer</Link>
+                                            <Link className="nav-link" to="/viewallfarmers">List Of Farmers</Link>
+                                            <Link className="nav-link" to="/farmerbyid">Search FarmerId</Link>
+                                            <Link className="nav-link" to="/updatefarmer">Update Farmer</Link>
+                                            <Link className="nav-link" to="/customerdata">Others</Link>
+                                        </div>
+                                    </div>
                                     <li className="nav-item">
                                         <Link className="nav-link" to="/logout" >Logout</Link>
                                     </li>
@@ -134,6 +158,17 @@ const Header = () => {
                                     <li className="nav-item">
                                         <Link className="nav-link" to="/customerpaybilltodealer" >PayToDealer</Link>
                                     </li>
+                                    <div class="dropdown">
+                                        <button class="dropbtn">Company</button>
+                                        <div class="dropdown-content">
+                                            <Link className="nav-link" to="/addcustomer">AddCustomer</Link>
+                                            <Link className="nav-link" to="/deletecustomer">DeleteCustomer</Link>
+                                            <Link className="nav-link" to="/getallcustomers">List Of Customers</Link>
+                                            <Link className="nav-link" to="/getcustomerbyid">Search CustomerId</Link>
+                                            <Link className="nav-link" to="/updatecustomer">Update Customer</Link>
+                                            <Link className="nav-link" to="/customerdata">Others</Link>
+                                        </div>
+                                    </div>
                                     <li className="nav-item">
                                         <Link className="nav-link" to="/logout" >Logout</Link>
                                     </li>
