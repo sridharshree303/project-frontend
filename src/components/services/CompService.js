@@ -1,0 +1,32 @@
+import axios from 'axios';
+
+// Create services for other components in this way. 
+
+const getCompanyByIdService = (companyId) => {
+    console.log(`getCompanyByIdService`);
+    return axios.get(`/company/get/${companyId}`);//http://localhost:8082//company/add
+}
+const getAllCompanyService = () => {
+    console.log(`getAllCompanyService`);
+    return axios.get(`/company/all`);
+}
+
+const insertCompanyService = (company) => {
+    console.log(`addcompany`);
+    return axios.post(`/company/add`, company);
+}
+
+const updateCompanyService = (company) => {
+    console.log(`updateCompany`);
+    return axios.put(`/company/update`, company);
+}
+
+const deleteCompanyService = (companyId) => {
+    console.log(`deleteCompany`);
+    return axios.post(`/company/delete/${companyId}`);
+}
+
+
+
+
+export { getCompanyByIdService, getAllCompanyService, insertCompanyService, updateCompanyService, deleteCompanyService };
