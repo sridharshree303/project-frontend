@@ -68,7 +68,7 @@ const Login = () => {
                             required
                         />
                         <div class="form-group">
-                            <select class="form-control mb-3" name="role" id="role" onChange={handleUserLogin}>
+                            <select type={userLogin.userType} class="form-control mb-3" name="userType" id="userType" onChange={handleUserLogin}>
                             <option value="User">Select a role</option>
                                 <option value="ADMIN" >ADMIN</option>
                                 <option value="FARMER">FARMER</option>
