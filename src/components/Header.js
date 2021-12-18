@@ -37,19 +37,15 @@ const Header = () => {
                                         <Link className="nav-link" to="/companysellsmilktodealer">CompanySellMilk</Link>
                                     </li>
 
-
                                     <div class="dropdown">
                                         <button class="dropbtn">Milk</button>
                                         <div class="dropdown-content">
                                             {/* <li className="nav-item"> */}
-                                                <Link className="nav-link" to="/getallcompanybuyorders">AllCompanyBuys</Link>
-                                            {/* </li> */}
-                                            {/* <li className="nav-item"> */}
-                                                <Link className="nav-link" to="/getallcompanysellorders">AllCompanySells</Link>
-                                            {/* </li> */}
+                                            <Link className="nav-link" to="/getallcompanybuyorders">AllCompanyBuys</Link> 
+                                            <Link className="nav-link" to="/getallcompanysellorders">AllCompanySells</Link>
+                                            <Link className="nav-link" to="/companypaybilltofarmer">PayFarmerBill</Link>
                                         </div>
                                     </div>
-
 
                                     {/* <li className="nav-item">
                                         <Link className="nav-link" to="/getallcompanybuyorders">AllCompanyBuys</Link>
@@ -69,7 +65,24 @@ const Header = () => {
         } else if (user === 'FARMER') {
             return (
                 <header class="header sticky-top">
-                    <h1> This is farmer section</h1>
+                    <nav class="navbar navbar-fixed-top navbar-expand-lg navbar-dark bg-dark">
+                        <div class="container">
+                            <Link className="navbar-brand" to="/">
+                                <img src="https://www.teahub.io/photos/full/80-801743_full-hd-3d-plain-background.jpg"
+                                    height="24px" alt="Capgemini" />
+                            </Link>
+                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse" id="navbarResponsive">
+                                <ul class="navbar-nav ml-auto">
+                                    <li className="nav-item">
+                                        <Link className="nav-link" to="/logout" >Logout</Link>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>
                 </header>
             );
         } else if (user === 'DEALER') {
@@ -93,6 +106,9 @@ const Header = () => {
                                         <Link className="nav-link" to="/getalldealersellorders">AllDealerSells</Link>
                                     </li>
                                     <li className="nav-item">
+                                        <Link className="nav-link" to="/dealerpaybilltocompany">PayToCompany</Link>
+                                    </li>
+                                    <li className="nav-item">
                                         <Link className="nav-link" to="/logout" >Logout</Link>
                                     </li>
                                 </ul>
@@ -101,7 +117,36 @@ const Header = () => {
                     </nav>
                 </header>
             );
+        } else if (user === 'CUSTOMER') {
+            return (
+                <header class="header sticky-top">
+                    <nav class="navbar navbar-fixed-top navbar-expand-lg navbar-dark bg-dark">
+                        <div class="container">
+                            <Link className="navbar-brand" to="/">
+                                <img src="https://www.teahub.io/photos/full/80-801743_full-hd-3d-plain-background.jpg"
+                                    height="24px" alt="Capgemini" />
+                            </Link>
+                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse" id="navbarResponsive">
+                                <ul class="navbar-nav ml-auto">
+                                    <li className="nav-item">
+                                        <Link className="nav-link" to="/customerpaybilltodealer" >PayToDealer</Link>
+                                    </li>
+                                    <li className="nav-item">
+                                        <Link className="nav-link" to="/logout" >Logout</Link>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>
+                </header>
+            );
+        } else {
+            return null;
         }
+
     } else {
         return (
             <header class="header sticky-top">
