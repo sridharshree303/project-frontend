@@ -13,6 +13,9 @@ import DealerSellMilkToCustomer from "./components/dealer/DealerSellMilkToCustom
 import GetAllCompanyBuyOrders from "./components/company/GetAllCompanyBuyOrders";
 import GetAllCompanySellOrders from "./components/company/GetAllCompanySellOrders";
 import GetAllDealerSellOrders from "./components/dealer/GetAllDealerSellOrders";
+import CompanyPayBillToFarmer from "./components/company/CompanyPayBillToFarmer";
+import DealerPayBillToCompany from "./components/dealer/DealerPayBillToCompany";
+import CustomerPayBillToDealer from "./components/customer/CustomerPayBillToDealer";
 
 const Routes = () => {
 
@@ -35,11 +38,12 @@ const Routes = () => {
                             <div className="container">
                                 <Switch>
                                     <Route exact path="/" loginStatus > <Home /> </Route>
+                                    <Route path="/home" loginStatus> <Home /> </Route>
                                     <Route path="/companybuymilkfromfarmer"><CompanyBuyMilkFromFarmer /></Route>
                                     <Route path="/companysellsmilktodealer"><CompanySellsMilkToDealer /></Route>
-                                    <Route path="/getallcompanybuyorders"><GetAllCompanyBuyOrders/></Route>
-                                    <Route path="/getallcompanysellorders" ><GetAllCompanySellOrders/></Route>
-                                    <Route path="/home" loginStatus> <Home /> </Route>
+                                    <Route path="/getallcompanybuyorders"><GetAllCompanyBuyOrders /></Route>
+                                    <Route path="/getallcompanysellorders" ><GetAllCompanySellOrders /></Route>
+                                    <Route path="/companypaybilltofarmer"><CompanyPayBillToFarmer /></Route>
                                     <Route path="/logout"> <Logout /> </Route>
                                     <Route path="/*"> <Page404 /> </Route>
                                 </Switch>
@@ -54,6 +58,15 @@ const Routes = () => {
                 <div>
                     <Router>
                         <Header />
+                        <div className="container">
+                            <Switch>
+                                <Route exact path="/" loginStatus > <Home /> </Route>
+                                <Route path="/home" loginStatus> <Home /> </Route>
+                                <Route path="/logout"> <Logout /> </Route>
+                                <Route path="/*"> <Page404 /> </Route>
+                            </Switch>
+                        </div>
+                        {/* <Footer /> */}
                     </Router>
                 </div>
             );
@@ -68,7 +81,8 @@ const Routes = () => {
                                     <Route exact path="/" loginStatus > <Home /> </Route>
                                     <Route path="/home" loginStatus> <Home /> </Route>
                                     <Route path="/dealersellmilktocustomer" ><DealerSellMilkToCustomer /></Route>
-                                    <Route path="/getalldealersellorders" ><GetAllDealerSellOrders/></Route>
+                                    <Route path="/getalldealersellorders" ><GetAllDealerSellOrders /></Route>
+                                    <Route path="/dealerpaybilltocompany" ><DealerPayBillToCompany /></Route>
                                     <Route path="/logout"> <Logout /> </Route>
                                     <Route path="/*"> <Page404 /> </Route>
                                 </Switch>
@@ -78,9 +92,29 @@ const Routes = () => {
                     </Router>
                 </div>
             );
+        } else if (user === 'CUSTOMER') {
+            return (
+                <div>
+                    <Router>
+                        <div>
+                            <Header />
+                            <div className="container">
+                                <Switch>
+                                <Route exact path="/" loginStatus > <Home /> </Route>
+                                <Route path="/home" loginStatus> <Home /> </Route>
+                                <Route path="/customerpaybilltodealer" ><CustomerPayBillToDealer/></Route>
+                                <Route path="/logout"> <Logout /> </Route>
+                                <Route path="/*"> <Page404 /> </Route>
+                                </Switch>
+                            </div>
+                            {/* <Footer /> */}
+                        </div>
+                    </Router>
+                </div>
+            );
         } else {
             return null;
-        }
+        };
     }
     else {
         return (
