@@ -7,6 +7,7 @@ import Logout from "./components/Logout";
 import Register from "./components/Register";
 import Page404 from "./components/Page404";
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import CompanySellsMilkToDealer from "./components/company/CompanySellMilkToDealer";
 
 const Routes = () => {
 
@@ -29,9 +30,11 @@ const Routes = () => {
                             <div className="container">
                                 <Switch>
                                     <Route exact path="/" loginStatus > <Home /> </Route>
+                                    <Route path="/companysellsmilktodealer"><CompanySellsMilkToDealer /></Route>
                                     <Route path="/home" loginStatus> <Home /> </Route>
                                     <Route path="/logout"> <Logout /> </Route>
                                     <Route path="/*"> <Page404 /> </Route>
+
                                 </Switch>
                             </div>
                             {/* <Footer /> */}
@@ -55,7 +58,7 @@ const Routes = () => {
                     </Router>
                 </div>
             );
-        }else {
+        } else {
             return null;
         }
     }

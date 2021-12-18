@@ -5,6 +5,7 @@ import { useState,/*useEffect*/ } from "react";
 import axios from "axios";
 import UserLogin from "./models/UserLogin";
 
+
 const Register = () => {
 
     const history = useHistory();
@@ -68,7 +69,6 @@ const Register = () => {
                                 <option value="FARMER">FARMER</option>
                                 <option value="DEALER">DEALER</option>
                                 <option value="CUSTOMER">CUSTOMER</option>
-
                             </select>
                         </div>
                         <input
