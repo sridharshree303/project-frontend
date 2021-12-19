@@ -33,6 +33,11 @@ import DeleteFarmer from "./components/farmer/DeleteFarmer";
 import FarmerById from "./components/farmer/FarmerById";
 import UpdateFarmer from "./components/farmer/UpdateFarmer";
 import ViewAllFarmers from "./components/farmer/ViewAllFarmers";
+import AddDealer from "./components/dealer/AddDealer";
+import DeleteDealer from "./components/dealer/DeleteDealer";
+import GetDealerById from "./components/dealer/GetDealerById";
+import UpdateDealer from "./components/dealer/UpdateDealer";
+import GetAllDealer from "./components/dealer/GetAllDealer";
 
 const Routes = () => {
 
@@ -111,6 +116,11 @@ const Routes = () => {
                                     <Route path="/dealersellmilktocustomer" ><DealerSellMilkToCustomer /></Route>
                                     <Route path="/getalldealersellorders" ><GetAllDealerSellOrders /></Route>
                                     <Route path="/dealerpaybilltocompany" ><DealerPayBillToCompany /></Route>
+                                    <Route path="/adddealer" ><AddDealer/></Route>
+                                    <Route path="/deletedealer" ><DeleteDealer/></Route>
+                                    <Route path="/getdealerbyid"><GetDealerById/></Route>
+                                    <Route path="/updatedealer" ><UpdateDealer/></Route>
+                                    <Route path="/getalldealer" ><GetAllDealer/></Route>
                                     <Route path="/logout"> <Logout /> </Route>
                                     <Route path="/*"> <Page404 /> </Route>
                                 </Switch>
