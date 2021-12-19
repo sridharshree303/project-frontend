@@ -132,6 +132,16 @@ const Header = () => {
                                     <li className="nav-item">
                                         <Link className="nav-link" to="/dealerpaybilltocompany">PayToCompany</Link>
                                     </li>
+                                    <div class="dropdown">
+                                        <button class="dropbtn">Dealer</button>
+                                        <div class="dropdown-content">
+                                            <Link className="nav-link" to="/adddealer">AddDealer</Link>
+                                            <Link className="nav-link" to="/deletedealer">DeleteDealer</Link>
+                                            <Link className="nav-link" to="/getdealerbyid">Search dealerId</Link>
+                                            <Link className="nav-link" to="/updatedealer">Update Dealer</Link>
+                                            <Link className="nav-link" to="/getalldealer">List of Dealers</Link>
+                                        </div>
+                                    </div>
                                     <li className="nav-item">
                                         <Link className="nav-link" to="/logout" >Logout</Link>
                                     </li>
