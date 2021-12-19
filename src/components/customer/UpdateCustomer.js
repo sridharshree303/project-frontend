@@ -1,13 +1,12 @@
 import { useState } from "react";
 import axios from "axios";
-// import Customer from "../../models/Customer";
 import Customer from "../models/Customer";
 
 
 const UpdateCustomer = () => {
 
 
-    const [newCustomerObj, setNewCustomerObj] = useState(new Customer());
+    const[ setNewCustomerObj] = useState(new Customer());
     const [updtCustomerObj, setUpdtCustomerObj] = useState(new Customer());
     const [updateCustomerObj, setUpdateCustomerObj] = useState(new Customer());
 

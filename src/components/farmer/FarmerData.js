@@ -1,11 +1,11 @@
 import { getFarmerByIdService } from "../services/FarmService";
 import { useDispatch, useSelector } from "react-redux";
 import { useState } from "react";
-import { getAllFarmerService, addFarmerService, updateFarmerService, deleteFarmerService, companyBuysMilkService } from "../services/FarmService";
+import { getAllFarmerService } from "../services/FarmService";
 // import { getEmpById, getAllEmps } from '../redux/EmpSlice';
 import axios from "axios";
 
-import { getFarmerById, getAllFarmer, deleteFarmerByID } from "../../redux/FarmerSlice";
+import { getFarmerById, getAllFarmer } from "../../redux/FarmerSlice";
 import Farmer from "../models/Farmer";
 
 
@@ -168,7 +168,7 @@ const FarmerData = () => {
                         name="firstName"
                         value={newFarmerObj.firstName}
                         onChange={handleAddFarmer}
-                        placeholder="Enter First Name" />
+                        placeholder="Enter First Name" autoFocus/>
                     <input
                         type="text"
                         id="lastName"
@@ -184,14 +184,14 @@ const FarmerData = () => {
                         onChange={handleAddFarmer}
                         placeholder="Enter Mobile Number" />
                     <input
-                        type="text"
+                        type="email"
                         id="email"
                         name="email"
                         value={newFarmerObj.email}
                         onChange={handleAddFarmer}
                         placeholder="Enter Email" />
                     <input
-                        type="text"
+                        type="password"
                         id="password"
                         name="password"
                         value={newFarmerObj.password}
@@ -212,7 +212,7 @@ const FarmerData = () => {
                 {/* <form onSubmit={submitAddEmp}> */}
                 <div id="addNewFarmerDiv">
                     <input
-                        type="text"
+                        type="number"
                         id="farmerId"
                         name="farmerId"
                         value={updtFarmerObj.farmerId}
@@ -230,7 +230,7 @@ const FarmerData = () => {
                         id="lastName"
                         name="lastName"
                         value={updtFarmerObj.lastName}
-                        onChange={handleUpdateFarmer}
+                        onChange={handleUpdateFarmer}s
                         placeholder="Enter Last Name" />
                     <input
                         type="text"
@@ -240,14 +240,14 @@ const FarmerData = () => {
                         onChange={handleUpdateFarmer}
                         placeholder="Enter Mobile Number" />
                     <input
-                        type="text"
+                        type="email"
                         id="email"
                         name="email"
                         value={updtFarmerObj.email}
                         onChange={handleUpdateFarmer}
                         placeholder="Enter Email" />
                     <input
-                        type="text"
+                        type="password"
                         id="password"
                         name="password"
                         value={updtFarmerObj.password}

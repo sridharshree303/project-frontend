@@ -9,7 +9,7 @@ const DeleteCustomer = () => {
 
     const [deleteCustomer, setDeleteCustomer] = useState('');
 
-    // const customerDelete = useSelector((state) => state.customer.customerDelete);
+    
 
     const handleDeleteCustomer = (ev) => {
         console.log('handleDeleteCustomer');

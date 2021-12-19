@@ -17,7 +17,6 @@ const CustomerPayBillToDealer = () => {
         console.log(event.target.value);
         setNewPayToDealerObj({
             ...newPayToDealerObj,
-            // [event.target.value]: event.target.name,
             [event.target.name]: event.target.value,
 
         });
@@ -165,7 +164,7 @@ const CustomerPayBillToDealer = () => {
                         />
                     </div>
                 </form>
-                {/* <p>Transaction details</p> */}
+            
                 <p>{dispPayToDealerObj}</p>
             </div>
         </div>

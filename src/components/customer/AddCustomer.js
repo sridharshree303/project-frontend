@@ -1,6 +1,5 @@
 import { useState } from "react";
 import axios from "axios";
-// import Customer from "../../models/Customer";
 import Customer from "../models/Customer";
 
 
@@ -74,7 +73,7 @@ const AddCustomer = () => {
                     <br/>
 
                  <input
-                    type="text"
+                    type="email"
                     id="email"
                     name="email"
                     value={newCustomerObj.email}
@@ -93,25 +92,20 @@ const AddCustomer = () => {
                     <br/>
                     <br/>
 
-                {/* <input
-                    type="submit"
-                    // type="button"
-                    value="Add Customer"
-                    onClick={submitAddCustomer}
-                /> */}
+                
                  <form className="form form-group form-primary" onSubmit={submitAddCustomer}>
                     {/* <input className="form-control mt-3" type="number" id="AddCustomer" name="AddCustomer" value={AddCustomer} onChange={handleAddCustomer} placeholder="Add Customer" autoFocus required /> */}
                     <input className="form-control mt-3 btn btn-primary" type="submit" value="Add Customer" />
                 </form>
             </div>
            
-            <p>New Customer Data:<p/> 
+            {/* <p>New Customer Data:<p/> 
             <p>CustomerId:{displayCustomerObj.customerId}</p> 
             <p>FirstName:{displayCustomerObj.firstName}</p>  
-            <p>LastName:{displayCustomerObj.lastName}</p>
+            <p>LastName:{displayCustomerObj.lastName}</p> */}
             {/* <p>Password:{displayCustomerObj.password}</p> */}
-            <p>MobileNumber:{displayCustomerObj.mobileNumber}</p>
-            <p>Email:{displayCustomerObj.email}</p></p>
+            {/* <p>MobileNumber:{displayCustomerObj.mobileNumber}</p>
+            <p>Email:{displayCustomerObj.email}</p></p> */}
         </div>
         </div>
 

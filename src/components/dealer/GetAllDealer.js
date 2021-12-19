@@ -1,7 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
-// import { getAllDealersService} from "../../../components/services/DealerServices";
 import { getAllDealersService} from "../services/DealerService";
-// import { getAllDealers } from "../../../redux/DealerSlice";
 import { getAllDealers } from "../../redux/DealerSlice";
 
 

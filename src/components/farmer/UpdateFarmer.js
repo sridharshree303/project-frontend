@@ -1,27 +1,17 @@
-import { getFarmerByIdService } from "../services/FarmService";
-import { useDispatch, useSelector } from "react-redux";
+
 import { useState } from "react";
-import { getAllFarmerService,addFarmerService,updateFarmerService,deleteFarmerService } from "../services/FarmService";
 // import { getEmpById, getAllEmps } from '../redux/EmpSlice';
 import axios from "axios";
 
-import { getFarmerById,getAllFarmer,deleteFarmerByID } from "../../redux/FarmerSlice";
 import Farmer from "../models/Farmer";
 
 
 const UpdateFarmer = () => {
 
-    const [newFarmerObj, setNewFarmerObj] = useState(new Farmer());
+    const [ setNewFarmerObj] = useState(new Farmer());
     const [updtFarmerObj, setUpdtFarmerObj] = useState(new Farmer());
-    const [displayFarmerObj, setDisplayFarmerObj] = useState(new Farmer());
-    const [updateFarmerObj, setUpdateFarmerObj] = useState(new Farmer());
-    const [fid, setFid] = useState('');
-    const [deleteFarmer, setDeleteFarmer] = useState('');
-    const dispatch = useDispatch();
-    const farmerDataFromStore = useSelector((state) => state.farm.farmState);
-    const farmerList = useSelector((state) => state.farm.farmList);
-    const farmerDelete = useSelector((state) => state.farm.farmerDelete);
-
+        const [updateFarmerObj, setUpdateFarmerObj] = useState(new Farmer());
+           
 
     const handleUpdateFarmer = (e) => {
         console.log(e.target.value);

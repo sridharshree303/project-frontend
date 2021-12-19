@@ -1,12 +1,9 @@
 import { getFarmerByIdService } from "../services/FarmService";
 import { useDispatch, useSelector } from "react-redux";
 import { useState } from "react";
-import { getAllFarmerService,addFarmerService,updateFarmerService,deleteFarmerService } from "../services/FarmService";
 // import { getEmpById, getAllEmps } from '../redux/EmpSlice';
-import axios from "axios";
 
-import { getFarmerById,getAllFarmer,deleteFarmerByID } from "../../redux/FarmerSlice";
-import Farmer from "../models/Farmer";
+import { getFarmerById } from "../../redux/FarmerSlice";
 
 const FarmerById = () => {
 

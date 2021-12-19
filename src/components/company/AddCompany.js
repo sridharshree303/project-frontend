@@ -1,23 +1,17 @@
-import { useDispatch, useSelector } from "react-redux";
+
 import { useState } from "react";
-import { getAllCompanyService, getCompanyByIdService, insertCompanyService } from "../services/CompService";
 import axios from "axios";
 import Company from "../models/Company";
-import { deletecompanyById, getAllCompany, getcompanyById, insertcompany, updatecompany } from "../../redux/CompSlice";
 
 
 const AddCompany = () => {
 
 
-    const dispatch = useDispatch();
 
 
     const [newCompanyObj, setNewCompanyObj] = useState(new Company());
-    // const [updtCompanyObj, setUpdtCompanyObj] = useState(new Company());
+ 
     const [displayCompanyObj, setDisplayCompanyObj] = useState(new Company());
-    // const [updateCompanyObj, setUpdateCompanyObj] = useState(new Company());
-    // const [deleteCompany, setDeleteCompany] = useState('');
-    // const companyDelete = useSelector((state) => state.company.companyDelete);
 
     const handleAddCompany = (e) => {
         console.log(e.target.value);
@@ -58,14 +52,6 @@ const AddCompany = () => {
                         onChange={handleAddCompany}
                         placeholder="Enter Company Name" autoFocus/>
                     <br /><br />
-                    {/* <input
-                        type="text"
-                        id="companyId"
-                        name="companyId"
-                        value={newCompanyObj.companyId}
-                        onChange={handleAddCompany}
-                        placeholder="Enter companyId" />
-                        <br/><br/>  */}
                     <input
                         type="text"
                         id="mobileNumber"
@@ -99,13 +85,7 @@ const AddCompany = () => {
                         onChange={handleAddCompany}
                         placeholder="Enter address" />
                     <br /><br />
-                    {/* <input
-                        // type="submit"
-                        // // type="button"
-                        // value="Add Company"
-                        // onClick={submitAddCompany} 
-                        
-                    /> */}
+                   
                     <form className="form form-group form-primary">
                         <input className="mt-3 btn btn-primary btn-block" type="button" onClick={submitAddCompany} value="Add Company" />
                     </form>
@@ -114,7 +94,6 @@ const AddCompany = () => {
                 <p>Company Name: {displayCompanyObj.companyName}<br /></p>
                 <p>email: {displayCompanyObj.email}<br /></p>
                 <p>mobileNumber: {displayCompanyObj.mobileNumber}<br /></p>
-                {/* <p>password: {displayCompanyObj.password} <br/></p> */}
                 <p>address: {displayCompanyObj.address}</p>
             </div>
         </div>

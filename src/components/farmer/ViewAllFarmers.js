@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 
-import { getAllFarmerService,addFarmerService,updateFarmerService,deleteFarmerService } from "../services/FarmService";
+import { getAllFarmerService } from "../services/FarmService";
 
 import { getAllFarmer} from "../../redux/FarmerSlice";
 

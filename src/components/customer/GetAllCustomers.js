@@ -1,6 +1,5 @@
 import {getAllCustomerService} from "../services/CustomerServiceData";
 import { useDispatch, useSelector } from "react-redux";
-// import { viewCustomers } from "../../../redux/CustomerSlice";
 import { viewCustomers } from "../../redux/CustomerSlice";
 
 

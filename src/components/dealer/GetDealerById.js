@@ -1,9 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import { useState } from "react";
-// import { getDealerService } from "../../services/DealerServices";
 import { getDealerService } from "../services/DealerService";
-// import { getCustomerByIdService } from "../services/CustomerServiceData";
-// import {getDealById} from "../../../redux/DealerSlice";
 import {getDealById} from "../../redux/DealerSlice";
 
 

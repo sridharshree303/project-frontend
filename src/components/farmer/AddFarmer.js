@@ -1,11 +1,7 @@
-import { getFarmerByIdService } from "../services/FarmService";
-import { useDispatch, useSelector } from "react-redux";
 import { useState } from "react";
-import { getAllFarmerService,addFarmerService,updateFarmerService,deleteFarmerService } from "../services/FarmService";
 // import { getEmpById, getAllEmps } from '../redux/EmpSlice';
 import axios from "axios";
 
-import { getFarmerById,getAllFarmer,deleteFarmerByID } from "../../redux/FarmerSlice";
 import Farmer from "../models/Farmer";
 
 
@@ -49,7 +45,7 @@ const AddFarmer = () => {
                 name="firstName"
                 value={newFarmerObj.firstName}
                 onChange={handleAddFarmer}
-                placeholder="Enter First Name" />
+                placeholder="Enter First Name" autoFocus/>
                 <br/>
                 <br/>
             <input
@@ -71,7 +67,7 @@ const AddFarmer = () => {
                 <br/>
                 <br/>
              <input
-                type="text"
+                type="email"
                 id="email"
                 name="email"
                 value={newFarmerObj.email}
