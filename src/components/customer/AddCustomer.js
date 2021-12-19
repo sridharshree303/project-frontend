@@ -2,8 +2,6 @@ import { useState } from "react";
 import axios from "axios";
 import Customer from "../models/Customer";
 
-
-
 const AddCustomer = () => {
 
     const [newCustomerObj, setNewCustomerObj] = useState(new Customer());
@@ -31,7 +29,7 @@ const AddCustomer = () => {
                 alert("Customer could not be added.");
             });
     }
-7
+
     return (
         <div align="center"
             style={{
