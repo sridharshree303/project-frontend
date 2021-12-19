@@ -38,6 +38,7 @@ import DeleteDealer from "./components/dealer/DeleteDealer";
 import GetDealerById from "./components/dealer/GetDealerById";
 import UpdateDealer from "./components/dealer/UpdateDealer";
 import GetAllDealer from "./components/dealer/GetAllDealer";
+import FarmerData from "./components/farmer/FarmerData";
 
 const Routes = () => {
 
@@ -66,12 +67,23 @@ const Routes = () => {
                                     <Route path="/getallcompanybuyorders"><GetAllCompanyBuyOrders /></Route>
                                     <Route path="/getallcompanysellorders" ><GetAllCompanySellOrders /></Route>
                                     <Route path="/companypaybilltofarmer"><CompanyPayBillToFarmer /></Route>
+
                                     <Route path="/addcompany" ><AddCompany/></Route>
                                     <Route path="/deletecompany" ><DeleteCompany/></Route>
                                     <Route path="/getallcompany" ><GetAllCompany/></Route>
                                     <Route path="/getcompanybyid"><GetCompanyById/></Route>
                                     <Route path="/updatecompany"><UpdateCompany/></Route>
                                     <Route path="/companydata"><CompanyData/></Route>
+                                    {/* farmer ----------------------------------------------*/}
+                                    <Route path="/deletefarmer" ><DeleteFarmer/></Route>
+                                    <Route path="/addfarmer" ><AddFarmer/></Route>
+                                    <Route path="/viewallfarmers" ><ViewAllFarmers/></Route>
+                                    <Route path="/farmerbyid" ><FarmerById/></Route>
+                                    {/* dealer----------------------------------------------- */}
+                                    <Route path="/deletedealer" ><DeleteDealer/></Route>
+                                    <Route path="/adddealer" ><AddDealer/></Route>
+                                    <Route path="/getalldealer" ><GetAllDealer/></Route>
+                                    <Route path="/getdealerbyid"><GetDealerById/></Route>
                                     <Route path="/logout"> <Logout /> </Route>
                                     <Route path="/*"> <Page404 /> </Route>
                                 </Switch>
@@ -91,10 +103,11 @@ const Routes = () => {
                                 <Route exact path="/" loginStatus > <Home /> </Route>
                                 <Route path="/home" loginStatus> <Home /> </Route>
                                 <Route path="/addfarmer" ><AddFarmer/></Route>
-                                <Route path="/deletefarmer" ><DeleteFarmer/></Route>
                                 <Route path="/farmerbyid" ><FarmerById/></Route>
                                 <Route path="/updatefarmer" ><UpdateFarmer/></Route>
-                                <Route path="/viewallfarmers" ><ViewAllFarmers/></Route>
+                                <Route path="/getallcompany" ><GetAllCompany/></Route>
+                                <Route path="/getcompanybyid"><GetCompanyById/></Route>
+                                <Route path="/farmerdata" > <FarmerData/></Route>
                                 <Route path="/logout"> <Logout /> </Route>
                                 <Route path="/*"> <Page404 /> </Route>
                             </Switch>
@@ -117,10 +130,16 @@ const Routes = () => {
                                     <Route path="/getalldealersellorders" ><GetAllDealerSellOrders /></Route>
                                     <Route path="/dealerpaybilltocompany" ><DealerPayBillToCompany /></Route>
                                     <Route path="/adddealer" ><AddDealer/></Route>
-                                    <Route path="/deletedealer" ><DeleteDealer/></Route>
+                                    <Route path="/companysellsmilktodealer"><CompanySellsMilkToDealer /></Route>
+                                    <Route path="/getallcompanysellorders" ><GetAllCompanySellOrders /></Route>
                                     <Route path="/getdealerbyid"><GetDealerById/></Route>
                                     <Route path="/updatedealer" ><UpdateDealer/></Route>
-                                    <Route path="/getalldealer" ><GetAllDealer/></Route>
+                                    <Route path="/getcompanybyid"><GetCompanyById/></Route>
+                                    <Route path="/getallcompany" ><GetAllCompany/></Route>
+                                    <Route path="/addcustomer" ><AddCustomer/></Route>
+                                    <Route path="/deletecustomer" ><DeleteCustomer/></Route>
+                                    <Route path="/getallcustomers" ><GetAllCustomers/></Route>
+                                    <Route path="/getcustomerbyid" ><GetCustomerById/></Route>
                                     <Route path="/logout"> <Logout /> </Route>
                                     <Route path="/*"> <Page404 /> </Route>
                                 </Switch>
@@ -142,11 +161,11 @@ const Routes = () => {
                                 <Route path="/home" loginStatus> <Home /> </Route>
                                 <Route path="/customerpaybilltodealer" ><CustomerPayBillToDealer/></Route>
                                 <Route path="/addcustomer" ><AddCustomer/></Route>
-                                <Route path="/deletecustomer" ><DeleteCustomer/></Route>
                                 <Route path="/customerdata"><CustomerData/></Route>
-                                <Route path="/getallcustomers" ><GetAllCustomers/></Route>
+                                <Route path="/getdealerbyid"><GetDealerById/></Route>
                                 <Route path="/getcustomerbyid" ><GetCustomerById/></Route>
                                 <Route path="/updatecustomer" ><UpdateCustomer/></Route>
+                                <Route path="/getalldealer" ><GetAllDealer/></Route>
                                 <Route path="/logout"> <Logout /> </Route>
                                 <Route path="/*"> <Page404 /> </Route>
                                 </Switch>
