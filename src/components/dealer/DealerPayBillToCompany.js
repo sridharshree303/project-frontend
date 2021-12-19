@@ -40,9 +40,22 @@ const DealerPayBillToCompany = () => {
 
     }
     return (
+        <div align="center"
+            style={{
+                backgroundImage: " url(" + " https://cdn-a.william-reed.com/var/wrbm_gb_food_pharma/storage/images/publications/food-beverage-nutrition/foodnavigator-asia.com/headlines/policy/india-government-extends-ban-on-milk-products-from-china-amid-safety-concerns/8334792-1-eng-GB/India-government-extends-ban-on-milk-products-from-China-amid-safety-concerns_wrbm_large.png" + ")",
+                backgroundPosition: 'center',
+                backgroundSize: 'cover',
+                backgroundRepeat: 'no-repeat'
+            }}>
+             <div className="container"
+                style={{
+                    height: "125vh",
+                    color: "white"
+                }}>
+        
         <div className="container">
-            <div className="col-4 mt-3">
-                <h1 className="display-4 text-primary"> Dealer-Company Bill Payment</h1>
+            <div className="col-4 mt-4">
+                <h1 className="display-5 text-info"> Dealer-Company Bill Payment</h1>
                 <form className="form form-group form-dark" onSubmit={submitDealerPayBillToCompany}>
                     <div>
                         <input
@@ -169,8 +182,8 @@ const DealerPayBillToCompany = () => {
                 <p>{dispPayToCompanyObj}</p>
             </div>
         </div>
-
-    )
+</div></div>
+    );
 
 }
 

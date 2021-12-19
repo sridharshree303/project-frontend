@@ -41,7 +41,7 @@ const CompanyPayBillToFarmer = () => {
     return (
         <div className="container">
             <div className="col-4 mt-3">
-                <h1 className="display-4 text-primary">Company-Farmer Bill Payment</h1>
+                <h1 className="display-5 text-primary">Company-Farmer Bill Payment</h1>
                 <form className="form form-group form-dark" onSubmit={submitCompanyPayBillToFarmer}>
                     <div>
                     <input type="text"

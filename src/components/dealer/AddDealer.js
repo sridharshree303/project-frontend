@@ -31,12 +31,24 @@ const AddDealer = () => {
             });
     }
     return (
+        <div align="center"
+            style={{
+                backgroundImage: " url(" + " https://cdn-a.william-reed.com/var/wrbm_gb_food_pharma/storage/images/publications/food-beverage-nutrition/foodnavigator-asia.com/headlines/policy/india-government-extends-ban-on-milk-products-from-china-amid-safety-concerns/8334792-1-eng-GB/India-government-extends-ban-on-milk-products-from-China-amid-safety-concerns_wrbm_large.png" + ")",
+                backgroundPosition: 'center',
+                backgroundSize: 'cover',
+                backgroundRepeat: 'no-repeat'
+            }}>
+             <div className="container"
+                style={{
+                    height: "100vh",
+                    color: "white"
+                }}>
         <div className="container">
-        <h1 className="display-4 text-primary mt-3 mb-3" >Add Dealer Component</h1>
-        <div className="col-6 border border-light shadow p-3 mb-5 bg-white">
+        <h1 className="display-5 text-info mt-3 mb-3" >Register Dealer </h1>
+        <div className="col-5 border border-light shadow p-3 mb-5 bg-">
             
         <p>Add New Dealer</p>
-        {/* <form onSubmit={submitAddEmp}> */}
+        
         <div id="addNewDealerDiv">
             <input
                 type="text"
@@ -90,7 +102,9 @@ const AddDealer = () => {
                 onClick={submitinsertDealer}
             />
         </div>
-        <p>New Dealer Data: {displayDealerObj.DealerId} {displayDealerObj.firstName} {displayDealerObj.lastName}{displayDealerObj.mobileNumber}{displayDealerObj.email}</p>
+        <p>New Dealer Data: {displayDealerObj.DealerId}<br/>{displayDealerObj.firstName}<br/> {displayDealerObj.lastName}<br/>{displayDealerObj.mobileNumber}<br/>{displayDealerObj.email}</p>
+        </div>
+        </div>
         </div>
         </div>
         );

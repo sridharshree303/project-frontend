@@ -20,7 +20,7 @@ const Header = () => {
                         <div class="container">
                             <Link className="navbar-brand" to="/home">
                                 <img src="https://images.all-free-download.com/images/graphiclarge/colored_company_logos_creative_design_579470.jpg"
-                                    height="24px" alt="Capgemini" />
+                                    height="75px" alt="Capgemini" />
                             </Link>
                             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
                                 <span class="navbar-toggler-icon"></span>
@@ -102,9 +102,9 @@ const Header = () => {
                 <header class="header sticky-top">
                     <nav class="navbar navbar-fixed-top navbar-expand-lg navbar-dark bg-dark">
                         <div class="container">
-                            <Link className="navbar-brand" to="/">
-                                <img src="https://www.teahub.io/photos/full/80-801743_full-hd-3d-plain-background.jpg"
-                                    height="24px" alt="Capgemini" />
+                            <Link className="navbar-brand" to="/home">
+                                <img src="https://images.all-free-download.com/images/graphiclarge/colored_company_logos_creative_design_579470.jpg"
+                                    height="75px" alt="Capgemini" />
                             </Link>
                             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
                                 <span class="navbar-toggler-icon"></span>
@@ -154,9 +154,9 @@ const Header = () => {
                 <header class="header sticky-top">
                     <nav class="navbar navbar-fixed-top navbar-expand-lg navbar-dark bg-dark">
                         <div className="container">
-                            <Link className="navbar-brand" to="/">
-                                <img src="https://www.teahub.io/photos/full/80-801743_full-hd-3d-plain-background.jpg"
-                                    height="24px" alt="Capgemini" />
+                            <Link className="navbar-brand" to="/home">
+                                <img src="https://images.all-free-download.com/images/graphiclarge/colored_company_logos_creative_design_579470.jpg"
+                                    height="75px" alt="Capgemini" />
                             </Link>
                             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
                                 <span class="navbar-toggler-icon"></span>
@@ -185,10 +185,10 @@ const Header = () => {
                                         <button class="dropbtn">Dealer</button>
                                         <div class="dropdown-content">
                                             <Link className="nav-link" to="/adddealer">Register Dealer</Link>
-                                            <Link className="nav-link" to="/deletedealer">DeleteDealer</Link>
+
                                             <Link className="nav-link" to="/getdealerbyid">Search dealerId</Link>
                                             <Link className="nav-link" to="/updatedealer">Update Dealer</Link>
-                                            <Link className="nav-link" to="/getalldealer">List of Dealers</Link>
+
                                         </div>
                                     </div>
 
@@ -233,9 +233,9 @@ const Header = () => {
                 <header class="header sticky-top">
                     <nav class="navbar navbar-fixed-top navbar-expand-lg navbar-dark bg-dark">
                         <div class="container">
-                            <Link className="navbar-brand" to="/">
-                                <img src="https://www.teahub.io/photos/full/80-801743_full-hd-3d-plain-background.jpg"
-                                    height="24px" alt="Capgemini" />
+                            <Link className="navbar-brand" to="/home">
+                                <img src="https://images.all-free-download.com/images/graphiclarge/colored_company_logos_creative_design_579470.jpg"
+                                    height="75px" alt="Capgemini" />
                             </Link>
                             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
                                 <span class="navbar-toggler-icon"></span>
@@ -298,7 +298,7 @@ const Header = () => {
             <header class="header sticky-top">
                 <nav class="navbar navbar-fixed-top navbar-expand-lg navbar-dark bg-dark">
                     <div class="container">
-                        <Link className="navbar-brand" to="/">
+                        <Link className="navbar-brand" to="/home">
                             <img src="https://images.all-free-download.com/images/graphiclarge/colored_company_logos_creative_design_579470.jpg"
                                 height="75px" alt="Capgemini" />
                         </Link>

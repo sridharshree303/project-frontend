@@ -1,10 +1,10 @@
 import { useState } from "react";
 
 import axios from "axios";
-// import Dealer from "../../models/Dealer";
+
 import Dealer from "../models/Dealer";
 
-// import Customer from "../models/Customer";
+
 
 const UpdateDealer = () => {
 
@@ -36,11 +36,23 @@ const UpdateDealer = () => {
             });
     }
     return (
+        <div align="center"
+            style={{
+                backgroundImage: " url(" + " https://cdn-a.william-reed.com/var/wrbm_gb_food_pharma/storage/images/publications/food-beverage-nutrition/foodnavigator-asia.com/headlines/policy/india-government-extends-ban-on-milk-products-from-china-amid-safety-concerns/8334792-1-eng-GB/India-government-extends-ban-on-milk-products-from-China-amid-safety-concerns_wrbm_large.png" + ")",
+                backgroundPosition: 'center',
+                backgroundSize: 'cover',
+                backgroundRepeat: 'no-repeat'
+            }}>
+             <div className="container"
+                style={{
+                    height: "100vh",
+                    color: "white"
+                }}>
         <div className="container">
-        <div className="col-4 border border-light shadow p-3 mb-5 bg-white">
+        <div className="col-4 border border-light shadow p-3 mb-5 bg-">
             
-        <p>Update New Dealer</p>
-        {/* <form onSubmit={submitAddEmp}> */}
+        <p><h2>Update New Dealer</h2></p>
+       
         <div id="addNewDealerDiv">
         <input
                 type="text"
@@ -96,14 +108,16 @@ const UpdateDealer = () => {
                 placeholder="Enter password" />  
                 <br/>
                 <br/> 
-            <input
+            <input 
                 type="submit"
                 // type="button"
                 value="update Dealer"
                 onClick={submitUpdateDealer}
             />
         </div>
-        <p>Updated Dealer Data: {updateDealerObj.DealerId} {updateDealerObj.firstName} {updateDealerObj.lastName} {updateDealerObj.mobileNumber} {updateDealerObj.email}</p>
+        <p>Updated Dealer Data: {updateDealerObj.DealerId}<br/> {updateDealerObj.firstName} <br/>{updateDealerObj.lastName}<br/> {updateDealerObj.mobileNumber}<br/> {updateDealerObj.email}</p>
+    </div>
+    </div>
     </div>
     </div>
     );

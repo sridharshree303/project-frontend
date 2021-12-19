@@ -42,10 +42,22 @@ const UpdateCustomer = () => {
    
 
     return (
+        <div align="center"
+            style={{
+                backgroundImage: " url(" + "https://thumbs.dreamstime.com/b/cheerful-arabic-woman-doing-grocery-shopping-buying-milk-supermarket-choosing-dairy-products-modern-customer-purchasing-food-215742396.jpg" + ")",
+                backgroundPosition: 'center',
+                backgroundSize: 'cover',
+                backgroundRepeat: 'no-repeat'
+            }}>
+             <div className="container"
+                style={{
+                    height: "100vh",
+                    color: "white"
+                }}>
         <div className="container">
-            <h1 className="display-4 text-primary mt-3 mb-3" >Update Customer Component</h1>
+            <h1 className="display-5 text-primary mt-3 mb-3" >Update Customer Component</h1>
 
-            <div className="col-4 border border-light shadow p-3 mb-5 bg-white">
+            <div className="col-4 border border-light shadow p-3 mb-5 bg-">
             
             <p>Update New Customer</p>
             {/* <form onSubmit={submitAddEmp}> */}
@@ -108,28 +120,21 @@ const UpdateCustomer = () => {
                     <br/>
                     <br/>
                 
-                {/* <input
-                    type="submit"
-                    // type="button"
-                    value="update Customer"
-                    onClick={submitUpdateCustomer}
-                /> */}
 
               <form className="form form-group form-primary" onSubmit={submitUpdateCustomer}>
                     
                     <input className="form-control mt-3 btn btn-primary" type="submit" value="Update Customer" />
                 </form>
-            </div>
-            <p>Updated Farmer Data:
-             <p>CustomerId:{updateCustomerObj.customerId}</p>  
-             <p>FirstName:{updateCustomerObj.firstName}</p> 
-             <p>LastName:{updateCustomerObj.lastName}</p>
-             {/* <p>Password:{updateCustomerObj.password}</p>  */}
-             <p>MobileNumber:{updateCustomerObj.mobileNumber}</p> 
-             <p>Email:{updateCustomerObj.email}</p></p>
+            </div >
+                {/* <p class="text-info">Updated Farmer Data:
+                <p>CustomerId:{updateCustomerObj.customerId}</p>  
+                <p>FirstName:{updateCustomerObj.firstName}</p> 
+                <p>LastName:{updateCustomerObj.lastName}</p>
+                <p>MobileNumber:{updateCustomerObj.mobileNumber}</p> 
+                <p>Email:{updateCustomerObj.email}</p></p> */}
         </div>
 
-
+</div></div>
         </div>
     );
 }

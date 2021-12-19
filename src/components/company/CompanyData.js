@@ -1,12 +1,12 @@
 //import { getCompayByIdService } from "../services/CompService";
 import { useDispatch, useSelector  } from "react-redux";
 import { useState } from "react";
-import { getAllCompanyService,getCompanyByIdService,insertCompanyService} from "../services/CompService";
+import { getAllCompanyService,getCompanyByIdService} from "../services/CompService";
 import axios from "axios";
 import Company from "../models/Company";
 
 
-import { getcompanyById,getAllCompany, deletecompanyById, addcompany, updatecompany } from "../../redux/CompSlice";
+import { getcompanyById,getAllCompany } from "../../redux/CompSlice";
 
 const CompanyData = () => {
 
@@ -20,8 +20,7 @@ const CompanyData = () => {
     const [displayCompanyObj, setDisplayCompanyObj] = useState(new Company());
     const [updateCompanyObj, setUpdateCompanyObj] = useState(new Company());
     const [deleteCompany, setDeleteCompany] = useState('');
-    const companyDelete = useSelector((state) => state.company.companyDelete);
-    
+        
      
      
      

@@ -6,7 +6,6 @@ const UpdateCompany = () => {
 
      const [newCompanyObj, setNewCompanyObj] = useState(new Company());
     const [updtCompanyObj, setUpdtCompanyObj] = useState(new Company());
-     const [displayCompanyObj, setDisplayCompanyObj] = useState(new Company());
     const [updateCompanyObj, setUpdateCompanyObj] = useState('');
  
 
@@ -34,12 +33,24 @@ const UpdateCompany = () => {
     }
 
     return (
+        <div align="center"
+            style={{
+                backgroundImage: " url(" + " https://media.istockphoto.com/photos/american-country-farm-picture-id177505798?k=20&m=177505798&s=612x612&w=0&h=jFgHLVyAgTQ7DtPF81OqgygnDI4faMQ3RzvYz6PLozs=" + ")",
+                backgroundPosition: 'center',
+                backgroundSize: 'cover',
+                backgroundRepeat: 'no-repeat'
+            }}>
+             <div className="container"
+                style={{
+                    height: "100vh",
+                    color: "white"
+                }}>
         <div>
-            <h1 className="display-4 text-primary mt-3 mb-3" >Update Company</h1>
+            <h1 className="display-5 text-danger mt-3 mb-3" >Update Company</h1>
             <div className="col-4 border border-light shadow p-3 mb-5 bg-white">
             
             <p>Update New Company</p>
-            {/* <form onSubmit={submitAddEmp}> */}
+         
             <div id="addNewCompanyDiv">
             <input
                     type="text"
@@ -94,7 +105,7 @@ const UpdateCompany = () => {
                         </form>
             </div>
         </div>
- 
+ </div></div>
         </div>
     );
 }
