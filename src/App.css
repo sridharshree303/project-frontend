@@ -14,7 +14,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #7e98cc;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -77,3 +77,7 @@
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
 .dropdown:hover .dropbtn {background-color: #585f5834;}
+
+.background {
+  background-image: url(https://cleananddelicious.com/wp-content/uploads/2016/03/Avocad0-CD.jpg);
+  }
