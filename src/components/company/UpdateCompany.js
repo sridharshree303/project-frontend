@@ -1,22 +1,11 @@
-import { useDispatch, useSelector  } from "react-redux";
 import { useState } from "react";
-import { getAllCompanyService,getCompanyByIdService,insertCompanyService} from "../services/CompService";
 import axios from "axios";
 import Company from "../models/Company";
 
-
-import { getcompanyById,getAllCompany, deletecompanyById, addcompany, updatecompany } from "../../redux/CompSlice";
-
 const UpdateCompany = () => {
-
-    const [companyId, setCompanyId] = useState('');
-    const dispatch = useDispatch();
-    const companyDataFromStore = useSelector((state) => state.company.companyState);
-    const companyList = useSelector((state) => state.company.companyList);
 
      const [newCompanyObj, setNewCompanyObj] = useState(new Company());
     const [updtCompanyObj, setUpdtCompanyObj] = useState(new Company());
-     const [displayCompanyObj, setDisplayCompanyObj] = useState(new Company());
     const [updateCompanyObj, setUpdateCompanyObj] = useState('');
  
 
@@ -44,12 +33,24 @@ const UpdateCompany = () => {
     }
 
     return (
+        <div align="center"
+            style={{
+                backgroundImage: " url(" + " https://media.istockphoto.com/photos/american-country-farm-picture-id177505798?k=20&m=177505798&s=612x612&w=0&h=jFgHLVyAgTQ7DtPF81OqgygnDI4faMQ3RzvYz6PLozs=" + ")",
+                backgroundPosition: 'center',
+                backgroundSize: 'cover',
+                backgroundRepeat: 'no-repeat'
+            }}>
+             <div className="container"
+                style={{
+                    height: "100vh",
+                    color: "white"
+                }}>
         <div>
-            <h1 className="display-4 text-primary mt-3 mb-3" >Update Company</h1>
+            <h1 className="display-5 text-danger mt-3 mb-3" >Update Company</h1>
             <div className="col-4 border border-light shadow p-3 mb-5 bg-white">
             
             <p>Update New Company</p>
-            {/* <form onSubmit={submitAddEmp}> */}
+         
             <div id="addNewCompanyDiv">
             <input
                     type="text"
@@ -84,7 +85,7 @@ const UpdateCompany = () => {
                     placeholder="Enter Mobile Number" />
                     <br/><br/>
                  <input
-                    type="text"
+                    type="email"
                     id="email"
                     name="email"
                     value={updtCompanyObj.email}
@@ -99,25 +100,12 @@ const UpdateCompany = () => {
                     onChange={handleUpdateCompany}
                     placeholder="Enter password" /> 
                     <br/><br/>  
-                {/* <input
-                    type="submit"
-                    // type="button"
-                    value="update Company"
-                    onClick={submitUpdateCompany}
-                /> */}
                 <form className="form form-group form-primary">
                             <input className="mt-3 btn btn-primary btn-block" type="button" onClick={submitUpdateCompany} value="Update Company" />
                         </form>
             </div>
-        <p>Update Company: <br/></p>
-                <p>CompanyId: {updateCompanyObj.CompanyId} </p> 
-                <p>Company Name: {displayCompanyObj.companyName}<br/></p>
-                <p>email: {displayCompanyObj.email}<br/></p>
-                <p>mobileNumber: {displayCompanyObj.mobileNumber}<br/></p>
-                {/* <p>passwors: {displayCompanyObj.password} <br/></p> */}
-                <p>address: {displayCompanyObj.address}</p>
         </div>
- 
+ </div></div>
         </div>
     );
 }

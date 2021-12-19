@@ -17,7 +17,6 @@ const CustomerPayBillToDealer = () => {
         console.log(event.target.value);
         setNewPayToDealerObj({
             ...newPayToDealerObj,
-            // [event.target.value]: event.target.name,
             [event.target.name]: event.target.value,
 
         });
@@ -39,9 +38,21 @@ const CustomerPayBillToDealer = () => {
 
     }
     return (
+        <div align="center"
+            style={{
+                backgroundImage: " url(" + " https://media.istockphoto.com/photos/milk-jug-picture-id172296306?k=20&m=172296306&s=612x612&w=0&h=8BEG2QuJr7VM3DZXrUz301pbYhGP-ghqt6MJJEQ3Dvo=" + ")",
+                backgroundPosition: 'center',
+                backgroundSize: 'cover',
+                backgroundRepeat: 'no-repeat'
+            }}>
+             <div className="container"
+                style={{
+                    height: "100vh",
+                    color: "white"
+                }}>
         <div className="container">
             <div className="col-4 mt-3">
-                <h1 className="display-4 text-primary"> Customer-Dealer Bill Payment</h1>
+                <h1 className="display-5 text-info"> Customer-Dealer Bill Payment</h1>
                 <form className="form form-group form-dark" onSubmit={submitCustomerPayBillToDealer}>
                     <div>
 
@@ -165,11 +176,11 @@ const CustomerPayBillToDealer = () => {
                         />
                     </div>
                 </form>
-                {/* <p>Transaction details</p> */}
+            
                 <p>{dispPayToDealerObj}</p>
             </div>
         </div>
-
+</div></div>
     );
 
 }

@@ -1,12 +1,10 @@
 import React from "react";
-import { Link,/*useHistory */} from "react-router-dom";
-import { useState,/*useEffect */} from "react";
+import { Link,} from "react-router-dom";
+import { useState} from "react";
 import axios from "axios";
 import UserLogin from "./models/UserLogin";
 
 const Login = () => {
-
-    // const history = useHistory();
 
     const [userLogin, setUserLogin] = useState(new UserLogin());
     const [credentials, setCredentials] = useState('');
@@ -39,10 +37,18 @@ const Login = () => {
         event.preventDefault();
     }
     return (
-        <div className="container">
-            <div className="col-4 mt-3" >
-                <h1 className="display-4 text-primary">Login</h1>
-                <form className="form form-group form-dark " onSubmit={submitUserLogin}>
+        <div align="center" style={{
+
+            backgroundImage: "url(" + "  https://cdn.corporatefinanceinstitute.com/assets/affiliated-companies-1024x614.jpeg" + ")",     
+            backgroundPosition: 'center',
+            backgroundSize: 'cover',
+            backgroundRepeat: 'no-repeat'
+            }}>
+
+            <div className="col-3 mt-4 border border-light col-sm-4 center shadow p-3 mb-5 bg-" >
+                <h1 className="display-4 text-primary" >Login</h1>
+                <br/>
+                <form className="form form-group form-dark  text" onSubmit={submitUserLogin}>
                     <div>
                         <input
                             type="text"

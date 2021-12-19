@@ -1,7 +1,7 @@
-import { getCustomerByIdService,getAllCustomerService,AddCustomerService,updateCustomerService,deleteCustomerByIdService } from "../services/CustomerServiceData";
+import { getCustomerByIdService,getAllCustomerService } from "../services/CustomerServiceData";
 import { useDispatch, useSelector } from "react-redux";
 import { useState } from "react";
-import { viewCustomerById,viewCustomers ,insertCustomer,updateCustomer,deleteCustomerByI} from "../../redux/CustomerSlice";
+import { viewCustomerById,viewCustomers } from "../../redux/CustomerSlice";
 import axios from "axios";
 import Customer from "../models/Customer";
 
@@ -20,7 +20,7 @@ const CustomerData = () => {
     const dispatch = useDispatch();
     const customerDataFromStore = useSelector((state) => state.customer.customerState);
     const customerList = useSelector((state) => state.customer.customerList);
-    const customerDelete = useSelector((state) => state.customer.customerDelete);
+    
    
     const handleCustomer = (e) => {
         console.log('handleCustomer');

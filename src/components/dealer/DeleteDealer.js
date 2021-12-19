@@ -27,6 +27,18 @@ const DeleteDealer = () => {
         }
 
         return (
+            <div align="center"
+            style={{
+                backgroundImage: " url(" + " https://cdn-a.william-reed.com/var/wrbm_gb_food_pharma/storage/images/publications/food-beverage-nutrition/foodnavigator-asia.com/headlines/policy/india-government-extends-ban-on-milk-products-from-china-amid-safety-concerns/8334792-1-eng-GB/India-government-extends-ban-on-milk-products-from-China-amid-safety-concerns_wrbm_large.png" + ")",
+                backgroundPosition: 'center',
+                backgroundSize: 'cover',
+                backgroundRepeat: 'no-repeat'
+            }}>
+             <div className="container"
+                style={{
+                    height: "100vh",
+                    color: "white"
+                }}>
             <div className="container">
                 <h1 className="display-4 text-primary mt-3 mb-3" >Delete Customer Component</h1>
 
@@ -40,7 +52,7 @@ const DeleteDealer = () => {
                     {/* <p>Deleted Farmer details: {farmerDataFromStore.farmerId} {farmerDataFromStore.firstName} {farmerDataFromStore.lastName} </p> */}
                 </div>
             </div>
-
+</div></div>
 
         );
     }

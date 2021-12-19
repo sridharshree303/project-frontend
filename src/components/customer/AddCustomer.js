@@ -1,9 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
-// import Customer from "../../models/Customer";
 import Customer from "../models/Customer";
-
-
 
 const AddCustomer = () => {
 
@@ -25,8 +22,8 @@ const AddCustomer = () => {
             .then((response) => {
                 setDisplayCustomerObj(response.data);
                 alert('Customer added successfully.');
-                setNewCustomerObj({ firstName:'', lastName:'',password:'',mobileNumber:'',email:''})
-            
+                setNewCustomerObj({ firstName: '', lastName: '', password: '', mobileNumber: '', email: '' })
+
             })
             .catch(() => {
                 alert("Customer could not be added.");
@@ -34,88 +31,87 @@ const AddCustomer = () => {
     }
 
     return (
-        
-        <div className="container">
-        <h1 className="display-4 text-primary mt-3 mb-3" >Add Customer Component</h1>
-        <div className="col-6 border border-light shadow p-3 mb-5 bg-white">
- 
-            
-            <p>Add New Customer</p>
-             
-            <div id="addNewCustomerDiv">
-            
-                <input
-                    type="text"
-                    id="firstName"
-                    name="firstName"
-                    value={newCustomerObj.firstName}
-                    onChange={handleAddCustomer}
-                    placeholder="Enter First Name" />
-                    <br/>
-                    <br/>
-                <input
-                    type="text"
-                    id="lastName"
-                    name="lastName"
-                    value={newCustomerObj.lastName}
-                    onChange={handleAddCustomer}
-                    placeholder="Enter Last Name" />
-                    <br/>
-                    <br/>
+        <div align="center"
+            style={{
+                backgroundImage: " url(" + " https://media.istockphoto.com/photos/milk-jug-picture-id172296306?k=20&m=172296306&s=612x612&w=0&h=8BEG2QuJr7VM3DZXrUz301pbYhGP-ghqt6MJJEQ3Dvo=" + ")",
+                backgroundPosition: 'center',
+                backgroundSize: 'cover',
+                backgroundRepeat: 'no-repeat'
+            }}>
+             <div className="container"
+                style={{
+                    height: "100vh",
+                    color: "white"
+                }}>
+                    <p>Add New Customer</p>
+            <div className="container">
+                <h1 className="display-5 text- mt-3 mb-3" >Add Customer Component</h1>
+                <div className="col-5 border border-light shadow p-3 mb-5 bg-">
 
-                <input
-                    type="text"
-                    id="mobileNumber"
-                    name="mobileNumber"
-                    value={newCustomerObj.mobileNumber}
-                    onChange={handleAddCustomer}
-                    placeholder="Enter Mobile Number" />
-                    <br/>
-                    <br/>
 
-                 <input
-                    type="text"
-                    id="email"
-                    name="email"
-                    value={newCustomerObj.email}
-                    onChange={handleAddCustomer}
-                    placeholder="Enter Email" />   
-                    <br/>
-                    <br/>
+                   
 
-                 <input
-                    type="password"
-                    id="password"
-                    name="password"
-                    value={newCustomerObj.password}
-                    onChange={handleAddCustomer}
-                    placeholder="Enter password" />   
-                    <br/>
-                    <br/>
+                    <div id="addNewCustomerDiv">
 
-                {/* <input
-                    type="submit"
-                    // type="button"
-                    value="Add Customer"
-                    onClick={submitAddCustomer}
-                /> */}
-                 <form className="form form-group form-primary" onSubmit={submitAddCustomer}>
-                    {/* <input className="form-control mt-3" type="number" id="AddCustomer" name="AddCustomer" value={AddCustomer} onChange={handleAddCustomer} placeholder="Add Customer" autoFocus required /> */}
-                    <input className="form-control mt-3 btn btn-primary" type="submit" value="Add Customer" />
-                </form>
+                        <input
+                            type="text"
+                            id="firstName"
+                            name="firstName"
+                            value={newCustomerObj.firstName}
+                            onChange={handleAddCustomer}
+                            placeholder="Enter First Name" />
+                        <br />
+                        <br />
+                        <input
+                            type="text"
+                            id="lastName"
+                            name="lastName"
+                            value={newCustomerObj.lastName}
+                            onChange={handleAddCustomer}
+                            placeholder="Enter Last Name" />
+                        <br />
+                        <br />
+
+                        <input
+                            type="text"
+                            id="mobileNumber"
+                            name="mobileNumber"
+                            value={newCustomerObj.mobileNumber}
+                            onChange={handleAddCustomer}
+                            placeholder="Enter Mobile Number" />
+                        <br />
+                        <br />
+
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            value={newCustomerObj.email}
+                            onChange={handleAddCustomer}
+                            placeholder="Enter Email" />
+                        <br />
+                        <br />
+
+                        <input
+                            type="password"
+                            id="password"
+                            name="password"
+                            value={newCustomerObj.password}
+                            onChange={handleAddCustomer}
+                            placeholder="Enter password" />
+                        <br />
+                        
+
+
+                        <form className="form form-group form-primary" onSubmit={submitAddCustomer}>
+                            <input className="form-control col-6 mt-3 btn btn-primary" type="submit" value="Add Customer" />
+                        </form>
+                    </div>
+                </div>
             </div>
-           
-            <p>New Customer Data:<p/> 
-            <p>CustomerId:{displayCustomerObj.customerId}</p> 
-            <p>FirstName:{displayCustomerObj.firstName}</p>  
-            <p>LastName:{displayCustomerObj.lastName}</p>
-            {/* <p>Password:{displayCustomerObj.password}</p> */}
-            <p>MobileNumber:{displayCustomerObj.mobileNumber}</p>
-            <p>Email:{displayCustomerObj.email}</p></p>
-        </div>
+</div>
         </div>
 
-        
-    );
+     );
 }
-export default AddCustomer;
+  export default AddCustomer;

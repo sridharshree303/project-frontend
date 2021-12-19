@@ -1,27 +1,17 @@
-import { getFarmerByIdService } from "../services/FarmService";
-import { useDispatch, useSelector } from "react-redux";
+
 import { useState } from "react";
-import { getAllFarmerService,addFarmerService,updateFarmerService,deleteFarmerService } from "../services/FarmService";
 // import { getEmpById, getAllEmps } from '../redux/EmpSlice';
 import axios from "axios";
 
-import { getFarmerById,getAllFarmer,deleteFarmerByID } from "../../redux/FarmerSlice";
 import Farmer from "../models/Farmer";
 
 
 const UpdateFarmer = () => {
 
-    const [newFarmerObj, setNewFarmerObj] = useState(new Farmer());
+    const [ setNewFarmerObj] = useState(new Farmer());
     const [updtFarmerObj, setUpdtFarmerObj] = useState(new Farmer());
-    const [displayFarmerObj, setDisplayFarmerObj] = useState(new Farmer());
-    const [updateFarmerObj, setUpdateFarmerObj] = useState(new Farmer());
-    const [fid, setFid] = useState('');
-    const [deleteFarmer, setDeleteFarmer] = useState('');
-    const dispatch = useDispatch();
-    const farmerDataFromStore = useSelector((state) => state.farm.farmState);
-    const farmerList = useSelector((state) => state.farm.farmList);
-    const farmerDelete = useSelector((state) => state.farm.farmerDelete);
-
+        const [updateFarmerObj, setUpdateFarmerObj] = useState(new Farmer());
+           
 
     const handleUpdateFarmer = (e) => {
         console.log(e.target.value);
@@ -48,10 +38,31 @@ const UpdateFarmer = () => {
     }
 
     return (
+        <div align="center"
+
+        style={{
+            backgroundImage: " url(" + " https://victorianfarmer.com.au/wp-content/uploads/2017/03/dairy-farm-Victoria.jpg" + ")",
+            backgroundPosition: 'center',
+
+            backgroundSize: 'cover',
+
+            backgroundRepeat: 'no-repeat'
+
+        }}>
+
+        <div className="container"
+
+            style={{
+                height: "100vh",
+
+                color: "white"
+
+            }}>
 
 
-        <div className="col-4 border border-light shadow p-3 mb-5 bg-white">
-            
+        <div className="col-4 border border-light shadow p-3 mb-5 bg">
+
+        <h2  className="display-5 text mt-3 mb-3">Update Farmer deatils</h2> 
         <p>Update New Farmer</p>
         {/* <form onSubmit={submitAddEmp}> */}
         <div id="addNewFarmerDiv">
@@ -107,7 +118,7 @@ const UpdateFarmer = () => {
                 value={updtFarmerObj.password}
                 onChange={handleUpdateFarmer}
                 placeholder="Enter password" />  
-                <br/> 
+                <br/> <br/>
             <input
                 type="submit"
                 // type="button"
@@ -118,8 +129,8 @@ const UpdateFarmer = () => {
         <p>Updated Farmer Data: {updateFarmerObj.FarmerId} {updateFarmerObj.firstName} {updateFarmerObj.lastName} {updateFarmerObj.mobileNumber} {updateFarmerObj.email}</p>
     </div>
     
-
-
+</div>
+</div>
     );
 
 

@@ -9,7 +9,7 @@ const DeleteCustomer = () => {
 
     const [deleteCustomer, setDeleteCustomer] = useState('');
 
-    // const customerDelete = useSelector((state) => state.customer.customerDelete);
+    
 
     const handleDeleteCustomer = (ev) => {
         console.log('handleDeleteCustomer');
@@ -30,6 +30,18 @@ const DeleteCustomer = () => {
     }
 
     return (
+        <div align="center"
+            style={{
+                backgroundImage: " url(" + "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4HnuEKwPfmXpv0627mI2C1ZTSy2e6QpjVrg&usqp=CAU" + ")",
+                backgroundPosition: 'center',
+                backgroundSize: 'cover',
+                backgroundRepeat: 'no-repeat'
+            }}>
+             <div className="container"
+                style={{
+                    height: "100vh",
+                    color: "white"
+                }}>
         <div className="container">
             <h1 className="display-4 text-primary mt-3 mb-3" >Delete Customer Component</h1>
 
@@ -43,9 +55,9 @@ const DeleteCustomer = () => {
                 </form>
 
             </div>
-
+</div></div>
 
         </div>
     );
 }
-export default DeleteCustomer;
+export default DeleteCustomer;   

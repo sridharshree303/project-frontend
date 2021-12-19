@@ -1,11 +1,7 @@
-import { getFarmerByIdService } from "../services/FarmService";
-import { useDispatch, useSelector } from "react-redux";
 import { useState } from "react";
-import { getAllFarmerService,addFarmerService,updateFarmerService,deleteFarmerService } from "../services/FarmService";
 // import { getEmpById, getAllEmps } from '../redux/EmpSlice';
 import axios from "axios";
 
-import { getFarmerById,getAllFarmer,deleteFarmerByID } from "../../redux/FarmerSlice";
 import Farmer from "../models/Farmer";
 
 
@@ -29,8 +25,8 @@ const AddFarmer = () => {
             .then((response) => {
                 setDisplayFarmerObj(response.data);
                 alert('Farmer added successfully.');
-                setNewFarmerObj({ firstName:'', lastName:'',mobileNumber:'',email:'',password:''})
-            
+                setNewFarmerObj({ firstName: '', lastName: '', mobileNumber: '', email: '', password: '' })
+
             })
             .catch(() => {
                 alert("Farmer could not be added.");
@@ -38,69 +34,82 @@ const AddFarmer = () => {
     }
 
     return (
+        <div align="center"
+            style={{
+                backgroundImage: " url(" + " https://victorianfarmer.com.au/wp-content/uploads/2017/03/dairy-farm-Victoria.jpg" + ")",
+                backgroundPosition: 'center',
+                backgroundSize: 'cover',
+                backgroundRepeat: 'no-repeat'
+            }}>
+            <div className="container"
+                style={{
+                    height: "100vh",
+                    color: "white"
+                }}>
 
-        <div className="col-4 border border-light shadow p-3 mb-5 bg-white">
-            
-        <p>Add New Farmer</p>
-        <div id="addNewFarmerDiv">
-            <input
-                type="text"
-                id="firstName"
-                name="firstName"
-                value={newFarmerObj.firstName}
-                onChange={handleAddFarmer}
-                placeholder="Enter First Name" />
-                <br/>
-                <br/>
-            <input
-                type="text"
-                id="lastName"
-                name="lastName"
-                value={newFarmerObj.lastName}
-                onChange={handleAddFarmer}
-                placeholder="Enter Last Name" />
-                <br/>
-                <br/>
-            <input
-                type="text"
-                id="mobileNumber"
-                name="mobileNumber"
-                value={newFarmerObj.mobileNumber}
-                onChange={handleAddFarmer}
-                placeholder="Enter Mobile Number" />
-                <br/>
-                <br/>
-             <input
-                type="text"
-                id="email"
-                name="email"
-                value={newFarmerObj.email}
-                onChange={handleAddFarmer}
-                placeholder="Enter Email" />   
-                <br/>
-                <br/>
-             <input
-                type="password"
-                id="password"
-                name="password"
-                value={newFarmerObj.password}
-                onChange={handleAddFarmer}
-                placeholder="Enter password" />  
-                <br/>
-                <br/>
-            <input
-                type="submit"
-                value="Add Farmer"
-                onClick={submitAddFarmer}
-            />
-        </div>
-        <p>New Farmer Data: {displayFarmerObj.farmerId} {displayFarmerObj.firstName} {displayFarmerObj.lastName}{displayFarmerObj.mobileNumber}{displayFarmerObj.email}</p>
-    </div>
+                <div className="col-4 border border-light shadow p-3 mb-5 bg">
 
-    );
+                    <h2 className="display-5 text mt-3 mb-3">Add New Farmer</h2>
+                    <div id="addNewFarmerDiv">
+                        <input
+                            type="text"
+                            id="firstName"
+                            name="firstName"
+                            value={newFarmerObj.firstName}
+                            onChange={handleAddFarmer}
+                            placeholder="Enter First Name" autoFocus />
+                        <br />
+                        <br />
+                        <input
+                            type="text"
+                            id="lastName"
+                            name="lastName"
+                            value={newFarmerObj.lastName}
+                            onChange={handleAddFarmer}
+                            placeholder="Enter Last Name" />
+                        <br />
+                        <br />
+                        <input
+                            type="text"
+                            id="mobileNumber"
+                            name="mobileNumber"
+                            value={newFarmerObj.mobileNumber}
+                            onChange={handleAddFarmer}
+                            placeholder="Enter Mobile Number" />
+                        <br />
+                        <br />
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            value={newFarmerObj.email}
+                            onChange={handleAddFarmer}
+                            placeholder="Enter Email" />
+                        <br />
+                        <br />
+                        <input
+                            type="password"
+                            id="password"
+                            name="password"
+                            value={newFarmerObj.password}
+                            onChange={handleAddFarmer}
+                            placeholder="Enter password" />
+                        <br />
+                        <br />
+                        <input form-control mt-3 btn btn-primary
+                            type="submit"
+                            value="Add Farmer"
+                            onClick={submitAddFarmer}
+                        />
+                    </div>
+                    {/* <p>New Farmer Data: {displayFarmerObj.farmerId} {displayFarmerObj.firstName} {displayFarmerObj.lastName}{displayFarmerObj.mobileNumber}{displayFarmerObj.email}</p> */}
+                </div>
+            </div>
+            </div>
+            );
 
 
 
 }
 
-export default AddFarmer;
+            export default AddFarmer;

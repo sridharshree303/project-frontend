@@ -19,10 +19,10 @@ const GetAllCompanySellOrders = () => {
 
     return (
         <div className="container">
-        <h1 className="display-5 text-primary mt-3 mb-3" >Find All sell orders</h1>
+        <h1 className="display-5 text-primarys mt-3 mb-3" >Find All sell orders</h1>
 
         <div>
-            <div className="col-9 border border-light shadow p-3 mb-5 bg-white">
+            <div className="col-12 border border-light shadow p-3 mb-5 bg-white">
                 <p>Find all transactions</p>
                 <div>
                     <form className="form form-group form-primary">

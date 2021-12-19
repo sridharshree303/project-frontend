@@ -1,6 +1,5 @@
 import {getAllCustomerService} from "../services/CustomerServiceData";
 import { useDispatch, useSelector } from "react-redux";
-// import { viewCustomers } from "../../../redux/CustomerSlice";
 import { viewCustomers } from "../../redux/CustomerSlice";
 
 
@@ -31,6 +30,18 @@ const GetAllCustomers = () => {
 
     
     return (
+        <div align="center"
+            style={{
+                backgroundImage: " url(" + "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4HnuEKwPfmXpv0627mI2C1ZTSy2e6QpjVrg&usqp=CAU" + ")",
+                backgroundPosition: 'center',
+                backgroundSize: 'cover',
+                backgroundRepeat: 'no-repeat'
+            }}>
+             <div className="container"
+                style={{
+                    height: "100vh",
+                    color: "white"
+                }}>
         <div className="container">
             <h1 className="display-5 text-primary mt-3 mb-3" >Find All Customer Component</h1>
             <p>Fetch data from backend, store it in redux store and get it to component</p>
@@ -70,8 +81,8 @@ const GetAllCustomers = () => {
                 </div>
             </div>
          </div>
-            
-          
+        </div>
+    </div>
     );
 }
 export default GetAllCustomers;

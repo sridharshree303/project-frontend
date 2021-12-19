@@ -7,7 +7,6 @@ import CompanySellsMilk from "../models/CompanySellsMilk";
 
 const CompanySellsMilkToDealer = () => {
 
-    // const history = useHistory();
 
     const [companySellsMilk, setCompanySellsMilk] = useState(new CompanySellsMilk());
     const [dispCredentials, setDispCredentials] = useState('');
@@ -18,7 +17,7 @@ const CompanySellsMilkToDealer = () => {
         console.log(event.target.value);
         setCompanySellsMilk({
             ...companySellsMilk,
-            // [event.target.value]: event.target.name,
+        
             [event.target.name]: event.target.value,
 
         });
@@ -40,9 +39,16 @@ const CompanySellsMilkToDealer = () => {
 
     }
     return (
+        <div align="center"
+            style={{
+                backgroundImage: " url(" + " https://media.istockphoto.com/photos/american-country-farm-picture-id177505798?k=20&m=177505798&s=612x612&w=0&h=jFgHLVyAgTQ7DtPF81OqgygnDI4faMQ3RzvYz6PLozs=" + ")",
+                backgroundPosition: 'center',
+                backgroundSize: 'cover',
+                backgroundRepeat: 'no-repeat'
+            }}>
         <div className="container">
             <div className="col-4 mt-3">
-                <h1 className="display-4 text-primary">Company Sell Milk Transaction</h1>
+                <h1 className="display-6 text-primary">Company Sell Milk Transaction</h1>
                 <form className="form form-group form-dark" onSubmit={submitCompanySellsMilk}>
                     <div>
                         <input
@@ -129,7 +135,8 @@ const CompanySellsMilkToDealer = () => {
             </div>
         </div>
 
-    )
+</div>
+    );
 
 }
 

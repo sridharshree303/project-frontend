@@ -37,9 +37,9 @@ const Register = () => {
         event.preventDefault();
     }
     return (
-        <div className="container">
-            <div className="col-4 mt-3" >
-                <h1 className="display-4 text-primary">Register</h1>
+        <div align="center">
+            <div className="col-3 mt-4 col-2 border border-light col-sm-4 shadow p-3 mb-5 bg">
+                <h1 className="display-4 text-primary">Register</h1><br/>
                 <form className="form form-group form-dark " onSubmit={submitUserLogin}>
                     <div>
                         <input
