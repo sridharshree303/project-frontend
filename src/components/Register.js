@@ -37,8 +37,19 @@ const Register = () => {
         event.preventDefault();
     }
     return (
-        <div align="center">
-            <div className="col-3 mt-4 col-2 border border-light col-sm-4 shadow p-3 mb-5 bg">
+        <div align="center" style={{
+
+            backgroundImage: "url(" + "  https://cdn.corporatefinanceinstitute.com/assets/affiliated-companies-1024x614.jpeg" + ")",
+            backgroundPosition: 'center',
+            backgroundSize: 'cover',
+            backgroundRepeat: 'no-repeat'
+        }}>
+            <div className="container"
+                style={{
+                    height: "100vh",
+                    color: "white"
+                }}>
+            <div className="col-3 mt-4 col-2 border border-light col-sm-4 shadow p-5 mb-5 bg">
                 <h1 className="display-4 text-primary">Register</h1><br/>
                 <form className="form form-group form-dark " onSubmit={submitUserLogin}>
                     <div>
@@ -85,6 +96,7 @@ const Register = () => {
                 <Link to="/login" className="btn btn-primary col-12">Already registered? Login</Link>
             </div>
         </div >
+        </div>
 
     )
 }

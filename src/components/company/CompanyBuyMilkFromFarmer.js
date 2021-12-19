@@ -16,10 +16,8 @@ const CompanyBuyMilkFromFarmer = () => {
         console.log(e.target.value);
         setCompanyBuysMilkObj({
             ...companyBuysMilkObj,
-            // [e.target.value]: e.target.name,
             [e.target.name]: e.target.value,
-            // [e.target.value]:e.target.value,
-            // [e.target.name]:e.target.name,
+            
 
         });
     };
@@ -46,12 +44,7 @@ const CompanyBuyMilkFromFarmer = () => {
                 backgroundSize: 'cover',
                 backgroundRepeat: 'no-repeat'
             }}>
-            {/* <div className="container"
-                style={{
-                    height: "100vh",
-                    color: "white"
-                }}></div> */}
-
+            
             <div className="container">
                 <div className="col-4 mt-3">
                     <h1 className="display-6 text-primary">Company Buy Milk Transaction</h1>
