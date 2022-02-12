@@ -1,5 +1,4 @@
 import { useState } from "react";
-// import { getEmpById, getAllEmps } from '../redux/EmpSlice';
 import axios from "axios";
 
 import Farmer from "../models/Farmer";
@@ -102,7 +101,7 @@ const AddFarmer = () => {
                             onClick={submitAddFarmer}
                         />
                     </div>
-                    {/* <p>New Farmer Data: {displayFarmerObj.farmerId} {displayFarmerObj.firstName} {displayFarmerObj.lastName}{displayFarmerObj.mobileNumber}{displayFarmerObj.email}</p> */}
+                    <p>New Farmer Data: {displayFarmerObj.farmerId}<br/> {displayFarmerObj.firstName}<br/>{displayFarmerObj.lastName}<br/>{displayFarmerObj.mobileNumber}<br/>{displayFarmerObj.email}</p>
                 </div>
             </div>
             </div>

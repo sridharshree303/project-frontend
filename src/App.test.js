@@ -315,23 +315,3 @@ test('render Data from Find farmer by id', () => {
   expect(linkElement).toBeInTheDocument();
 });
 
-
-
-
-
- 
-
-// test('renders learn react link', () => {
-//   render(<App />);
-//   const linkElement = screen.getByText(/learn react/i);
-//   expect(linkElement).toBeInTheDocument();
-// });
-
-// test('render Data  from CustomerPayBillToDealer', () => {
-//   render(
-//     <Provider store={store} >
-//       <CustomerPayBillToDealer />
-//     </Provider>)
-//   const linkElement = screen.getByText('CustomerPayBillToDealer');
-//   expect(linkElement).toBeInTheDocument();
-// });
