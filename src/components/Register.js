@@ -1,7 +1,7 @@
 import React from "react";
 // import {Link, useHistory} from 'react';
 import { Link,useHistory } from "react-router-dom";
-import { useState,/*useEffect*/ } from "react";
+import { useState,useEffect } from "react";
 import axios from "axios";
 import UserLogin from "./models/UserLogin";
 
@@ -27,13 +27,14 @@ const Register = () => {
         axios.post('http://localhost:8082/registeruser', userLogin)
             .then((response) => {
                 console.log(response.data);
-                localStorage.setItem('userLogin', userLogin)
+                // localStorage.setItem('userLogin', userLogin)
                 alert('You are registered successfully. Please login now.');
                history.push('/login'); // check this method to navigate 
             }).catch((error) => {
                 console.log(error.response);
                 setCredentials("Enter proper credentials.");
             });
+      
         event.preventDefault();
     }
     return (
